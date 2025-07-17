@@ -10,7 +10,7 @@
       <TextField layoutX="394.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="Año" />
       <Button layoutX="479.0" layoutY="89.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Agregar" />
       <Button layoutX="479.0" layoutY="179.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Eliminar" />
-      <Button layoutX="479.0" layoutY="223.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Button" />
+      <Button layoutX="479.0" layoutY="223.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Ver" />
       <Button layoutX="479.0" layoutY="134.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Modificar" />
       <SplitMenuButton layoutX="247.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Genero">
         <items>

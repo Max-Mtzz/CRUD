@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.jmc.crud.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="ID" />
+      <TextField layoutX="136.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="Nombre" />
+      <TextField layoutX="394.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="Año" />
+      <Button layoutX="506.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" text="Button" />
+      <Button layoutX="506.0" layoutY="54.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" text="Button" />
+      <Button layoutX="553.0" layoutY="54.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" text="Button" />
+      <Button layoutX="553.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" text="Button" />
+      <SplitMenuButton layoutX="247.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Genero">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </SplitMenuButton>
+      <TableView layoutX="51.0" layoutY="79.0" prefHeight="200.0" prefWidth="409.0">
+        <columns>
+          <TableColumn prefWidth="105.0" text="ID" />
+          <TableColumn prefWidth="105.0" text="Nombre" />
+            <TableColumn prefWidth="105.0" text="Genero" />
+            <TableColumn prefWidth="105.0" text="Año" />
+        </columns>
+      </TableView>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+   </children>
+</Pane>

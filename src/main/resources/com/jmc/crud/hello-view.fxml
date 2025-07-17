@@ -8,14 +8,17 @@
       <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="ID" />
       <TextField layoutX="136.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="Nombre" />
       <TextField layoutX="394.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="Año" />
-      <Button layoutX="506.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" text="Button" />
-      <Button layoutX="506.0" layoutY="54.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" text="Button" />
-      <Button layoutX="553.0" layoutY="54.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" text="Button" />
-      <Button layoutX="553.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" text="Button" />
+      <Button layoutX="479.0" layoutY="89.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Agregar" />
+      <Button layoutX="479.0" layoutY="179.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Eliminar" />
+      <Button layoutX="479.0" layoutY="223.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Button" />
+      <Button layoutX="479.0" layoutY="134.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Modificar" />
       <SplitMenuButton layoutX="247.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Genero">
         <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem mnemonicParsing="false" text="Drama" />
+          <MenuItem mnemonicParsing="false" text="Comedia" />
+            <MenuItem mnemonicParsing="false" text="Terror" />
+            <MenuItem mnemonicParsing="false" text="Suspenso" />
+            <MenuItem mnemonicParsing="false" text="Ciencia Ficcion" />
         </items>
       </SplitMenuButton>
       <TableView layoutX="51.0" layoutY="79.0" prefHeight="200.0" prefWidth="409.0">

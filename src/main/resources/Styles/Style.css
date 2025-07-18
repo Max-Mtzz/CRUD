@@ -71,13 +71,6 @@
     -fx-background-color: #c0392b;
 }
 
-#btnVer {
-    -fx-background-color: #3498db;
-}
-#btnVer:hover {
-    -fx-background-color: #2980b9;
-}
-
 #btnClr {
     -fx-background-color: #4c4e9e;
 }

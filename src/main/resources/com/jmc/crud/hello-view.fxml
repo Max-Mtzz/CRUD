@@ -24,7 +24,6 @@
             <Button fx:id="btnAgregar" onAction="#agregarPelicula" text="Agregar" />
             <Button fx:id="btnModificar" onAction="#modificarPelicula" text="Modificar" />
             <Button fx:id="btnEliminar" onAction="#eliminarPelicula" text="Eliminar" />
-            <Button fx:id="btnVer" onAction="#cargarPeliculas" text="Ver" />
             <Button fx:id="btnClr" onAction="#limpiarCampos" text="Limpiar" />
         </HBox>
 

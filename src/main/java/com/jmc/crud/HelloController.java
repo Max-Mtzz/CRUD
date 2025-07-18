@@ -59,7 +59,6 @@ public class HelloController {
 
     @FXML
     private void cargarPeliculas() {
-        listaPeliculas.clear();
         String sql = "SELECT * FROM PELICULA";
 
         try (Connection conn = conexion.getConnection();

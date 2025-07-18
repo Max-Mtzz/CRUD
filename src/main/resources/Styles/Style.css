@@ -1,0 +1,111 @@
+.rot{
+    -fx-front-family: "poppins", sans-serif;
+    -fx-background-color: #f0f2f5;
+}
+
+.label{
+    -fx-front-weight: semi-bold;
+    -fx-text-fill: #2f3640;
+}
+
+/*campos de texto*/
+.text-field{
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 8;
+    -fx-background-radius-radius: 8;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #8e44ad;
+    -fx-border-width: 2;
+}
+
+/* SPLIT MENU (GÉNERO) */
+.split-menu-button {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-color: #ccc;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
+}
+
+.split-menu-button:hover {
+    -fx-border-color: #8e44ad;
+}
+
+/* BOTONES PERSONALIZADOS */
+.button {
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+/* Colores por función */
+#btnAgregar {
+    -fx-background-color: #27ae60;
+}
+#btnAgregar:hover {
+    -fx-background-color: #2ecc71;
+}
+
+#btnModificar {
+    -fx-background-color: #f1c40f;
+    -fx-text-fill: black;
+}
+
+#btnModificar:hover {
+    -fx-background-color: #f39c12;
+}
+
+#btnEliminar {
+    -fx-background-color: #e74c3c;
+}
+#btnEliminar:hover {
+    -fx-background-color: #c0392b;
+}
+
+#btnVer {
+    -fx-background-color: #3498db;
+}
+#btnVer:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* TABLA */
+.table-view {
+    -fx-background-color: linear-gradient(to right, #dfe4ea, #f5f6fa);
+    -fx-border-radius: 10;
+    -fx-padding: 8;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #8e44ad;
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 32;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.table-view .table-cell {
+    -fx-padding: 10;
+    -fx-font-size: 13px;
+}
+
+/* Efecto hover en filas */
+.table-row-cell:filled:hover {
+    -fx-background-color: #ecf0f1;
+}

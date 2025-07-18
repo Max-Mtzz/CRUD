@@ -15,7 +15,7 @@ public class conexion {
         System.setProperty("oracle.net.tns_admin", UBICACION_WALLET);
     }
 
-    public static Connection conectar() throws SQLException, ClassNotFoundException {
+    public static Connection getConnection() throws SQLException, ClassNotFoundException {
         Class.forName("oracle.jdbc.OracleDriver");
         return DriverManager.getConnection(JDBC_URL, USER, PASS);
     }

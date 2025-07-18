@@ -57,7 +57,29 @@ public class HelloController {
         }
     }
 
+    @FXML
     private void cargarPeliculas() {
+        listaPeliculas.clear();
+        String sql = "SELECT * FROM PELICULA";
+
+        try (Connection conn = conexion.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                listaPeliculas.add(new Pelicula(
+                        rs.getInt("id_pelicula"),
+                        rs.getString("nombre"),
+                        rs.getString("genero"),
+                        rs.getInt("año")
+                ));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }

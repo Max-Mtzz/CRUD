@@ -46,6 +46,15 @@ public class HelloController {
     }
 
     private void incializarGeneroMenu() {
+        String[] generos = {"Drama", "Comedia", "Terror", "Suspenso", "Ciencia ficción"};
+        for (String genero : generos) {
+            MenuItem item = new MenuItem(genero);
+            item.setOnAction(e -> {
+                generoSeleccionado = genero;
+                generoMenu.setText(genero);
+            });
+            generoMenu.getItems().add(item);
+        }
 
     }
 

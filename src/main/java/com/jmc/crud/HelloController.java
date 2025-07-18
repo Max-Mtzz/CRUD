@@ -101,6 +101,10 @@ public class HelloController {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void modificarPelicula() {
 
     }
 }

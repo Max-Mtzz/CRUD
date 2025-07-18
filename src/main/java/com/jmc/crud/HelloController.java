@@ -125,6 +125,27 @@ public class HelloController {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void eliminarPelicula() {
+        Pelicula seleccionada = tablePeliculas.getSelectionModel().getSelectedItem();
+        if (seleccionada == null) return;
+
+        String sql = "DELETE FROM PELICULA WHERE id_pelicula = ?";
+
+        try (Connection conn = conexion.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, seleccionada.getId());
+            stmt.executeUpdate();
+
+            cargarPeliculas();
+            limpiarCampos();
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 }

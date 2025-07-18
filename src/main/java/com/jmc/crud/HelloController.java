@@ -146,6 +146,14 @@ public class HelloController {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
 
+    @FXML
+    private void limpiarCampos() {
+        txtId.clear();
+        txtNombre.clear();
+        txtAno.clear();
+        generoMenu.setText("Género");
+        generoSeleccionado = "";
     }
 }

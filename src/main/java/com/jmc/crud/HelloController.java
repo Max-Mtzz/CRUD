@@ -24,4 +24,26 @@ public class HelloController {
     private ObservableList<Pelicula> listaPeliculas = FXCollections.observableArrayList();
     private String generoSeleccionado = "";
 
+    public void initialize() {
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        colGenero.setCellValueFactory(new PropertyValueFactory<>("genero"));
+        colAno.setCellValueFactory(new PropertyValueFactory<>("ano"));
+
+        incializarGeneroMenu();
+        cargarPeliculas();
+
+        tablePeliculas.setItems(listaPeliculas);
+        tablePeliculas.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                txtId.setText(String.valueOf(newVal.getId()));
+                txtNombre.setText(newVal.getNombre());
+                txtAno.setText(String.valueOf(newVal.getAno()));
+                generoMenu.setText(newVal.getGenero());
+                generoSeleccionado = newVal.getGenero();
+            }
+        });
+    }
+
+
 }

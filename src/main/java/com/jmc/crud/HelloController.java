@@ -80,6 +80,10 @@ public class HelloController {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @FXML
+    private void agregarPelicula() {
 
     }
 }

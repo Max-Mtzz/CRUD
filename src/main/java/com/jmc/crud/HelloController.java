@@ -105,6 +105,26 @@ public class HelloController {
 
     @FXML
     private void modificarPelicula() {
+        Pelicula seleccionada = tablePeliculas.getSelectionModel().getSelectedItem();
+        if (seleccionada == null) return;
+
+        String sql = "UPDATE PELICULA SET nombre = ?, genero = ?, año = ? WHERE id_pelicula = ?";
+
+        try (Connection conn = conexion.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, txtNombre.getText());
+            stmt.setString(2, generoSeleccionado);
+            stmt.setInt(3, Integer.parseInt(txtAno.getText()));
+            stmt.setInt(4, Integer.parseInt(txtId.getText()));
+
+            stmt.executeUpdate();
+            cargarPeliculas();
+            limpiarCampos();
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 }

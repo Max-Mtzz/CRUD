@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="500" prefWidth="775.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.jmc.crud.HelloController">
+<AnchorPane prefHeight="500" prefWidth="775.0" stylesheets="@../../../Styles/Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.crud.HelloController">
 
     <VBox layoutX="20" layoutY="20" spacing="10">
 
         <HBox spacing="10">
-            <TextField fx:id="txtId" promptText="ID" />
-            <TextField fx:id="txtNombre" promptText="Nombre de la película" />
+            <TextField fx:id="txtId" promptText="ID" styleClass="label" />
+            <TextField fx:id="txtNombre" promptText="Nombre de la película" styleClass="label" />
             <SplitMenuButton fx:id="generoMenu" text="Género" />
-            <TextField fx:id="txtAno" promptText="Año" />
+            <TextField fx:id="txtAno" promptText="Año" styleClass="label" />
         </HBox>
 
         <HBox spacing="10">
-            <Button onAction="#agregarPelicula" text="Agregar" />
-            <Button onAction="#modificarPelicula" text="Modificar" />
-            <Button onAction="#eliminarPelicula" text="Eliminar" />
-            <Button onAction="#cargarPeliculas" text="Ver" />
+            <Button fx:id="btnAgregar" onAction="#agregarPelicula" text="Agregar" />
+            <Button fx:id="btnModificar" onAction="#modificarPelicula" text="Modificar" />
+            <Button fx:id="btnEliminar" onAction="#eliminarPelicula" text="Eliminar" />
+            <Button fx:id="btnVer" onAction="#cargarPeliculas" text="Ver" />
         </HBox>
 
-        <TableView fx:id="tablePeliculas" prefHeight="300">
+        <TableView fx:id="tablePeliculas" prefHeight="300" styleClass="column-header">
             <columns>
                 <TableColumn fx:id="colId" text="ID" />
                 <TableColumn fx:id="colNombre" text="Nombre" />

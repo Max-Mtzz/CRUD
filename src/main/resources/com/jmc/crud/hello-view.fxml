@@ -3,33 +3,32 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="ID" />
-      <TextField layoutX="136.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="Nombre" />
-      <TextField layoutX="394.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" promptText="Año" />
-      <Button layoutX="479.0" layoutY="89.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Agregar" />
-      <Button layoutX="479.0" layoutY="179.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Eliminar" />
-      <Button layoutX="479.0" layoutY="223.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Ver" />
-      <Button layoutX="479.0" layoutY="134.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Modificar" />
-      <SplitMenuButton layoutX="247.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Genero">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Drama" />
-          <MenuItem mnemonicParsing="false" text="Comedia" />
-            <MenuItem mnemonicParsing="false" text="Terror" />
-            <MenuItem mnemonicParsing="false" text="Suspenso" />
-            <MenuItem mnemonicParsing="false" text="Ciencia Ficcion" />
-        </items>
-      </SplitMenuButton>
-      <TableView layoutX="51.0" layoutY="79.0" prefHeight="200.0" prefWidth="409.0">
-        <columns>
-          <TableColumn prefWidth="105.0" text="ID" />
-          <TableColumn prefWidth="105.0" text="Nombre" />
-            <TableColumn prefWidth="105.0" text="Genero" />
-            <TableColumn prefWidth="105.0" text="Año" />
-        </columns>
-      </TableView>
+<AnchorPane prefHeight="500" prefWidth="775.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.jmc.crud.HelloController">
 
+    <VBox layoutX="20" layoutY="20" spacing="10">
 
-   </children>
-</Pane>
+        <HBox spacing="10">
+            <TextField fx:id="txtId" promptText="ID" />
+            <TextField fx:id="txtNombre" promptText="Nombre de la película" />
+            <SplitMenuButton fx:id="generoMenu" text="Género" />
+            <TextField fx:id="txtAno" promptText="Año" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Button onAction="#agregarPelicula" text="Agregar" />
+            <Button onAction="#modificarPelicula" text="Modificar" />
+            <Button onAction="#eliminarPelicula" text="Eliminar" />
+            <Button onAction="#cargarPeliculas" text="Ver" />
+        </HBox>
+
+        <TableView fx:id="tablePeliculas" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" />
+                <TableColumn fx:id="colNombre" text="Nombre" />
+                <TableColumn fx:id="colGenero" text="Género" />
+                <TableColumn fx:id="colAno" text="Año" />
+            </columns>
+        </TableView>
+    </VBox>
+
+</AnchorPane>

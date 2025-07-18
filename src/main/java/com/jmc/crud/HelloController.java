@@ -84,6 +84,23 @@ public class HelloController {
 
     @FXML
     private void agregarPelicula() {
+        String sql = "INSERT INTO PELICULA (id_pelicula, nombre, genero, año) VALUES (?, ?, ?, ?)";
+
+        try (Connection conn = conexion.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, Integer.parseInt(txtId.getText()));
+            stmt.setString(2, txtNombre.getText());
+            stmt.setString(3, generoSeleccionado);
+            stmt.setInt(4, Integer.parseInt(txtAno.getText()));
+
+            stmt.executeUpdate();
+            cargarPeliculas();
+            limpiarCampos();
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 }

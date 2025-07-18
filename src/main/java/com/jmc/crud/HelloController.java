@@ -55,7 +55,9 @@ public class HelloController {
             });
             generoMenu.getItems().add(item);
         }
-
     }
 
+    private void cargarPeliculas() {
+
+    }
 }

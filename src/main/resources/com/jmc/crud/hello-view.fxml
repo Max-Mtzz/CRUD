@@ -21,13 +21,10 @@
         </HBox>
 
         <HBox spacing="10">
-            <Button fx:id="btnAgregar" onAction="#agregarPelicula" text="Agregar" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
-            <Button fx:id="btnModificar" onAction="#modificarPelicula" text="Modificar" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
-            <Button fx:id="btnEliminar" onAction="#eliminarPelicula" text="Eliminar" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
-            <Button fx:id="btnVer" onAction="#cargarPeliculas" text="Ver" style="-fx-background-color: #9C27B0; -fx-text-fill: white;"/>
-            <!-- Botones agregados con color -->
-            <Button fx:id="btnDesactivar" onAction="#desactivarPelicula" text="Desactivar" style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
-            <Button fx:id="btnReactivar" onAction="#reactivarPelicula" text="Reactivar" style="-fx-background-color: #009688; -fx-text-fill: white;"/>
+            <Button fx:id="btnAgregar" onAction="#agregarPelicula" text="Agregar" />
+            <Button fx:id="btnModificar" onAction="#modificarPelicula" text="Modificar" />
+            <Button fx:id="btnEliminar" onAction="#eliminarPelicula" text="Eliminar" />
+            <Button fx:id="btnVer" onAction="#cargarPeliculas" text="Ver" />
         </HBox>
 
         <TableView fx:id="tablePeliculas" prefHeight="300" styleClass="column-header">
@@ -36,7 +33,6 @@
                 <TableColumn fx:id="colNombre" text="Nombre" />
                 <TableColumn fx:id="colGenero" text="Género" />
                 <TableColumn fx:id="colAno" text="Año" />
-                <TableColumn fx:id="colEstado" text="Estado" />
             </columns>
         </TableView>
     </VBox>

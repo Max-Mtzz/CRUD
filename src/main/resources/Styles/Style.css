@@ -71,11 +71,11 @@
     -fx-background-color: #c0392b;
 }
 
-#btnVer {
-    -fx-background-color: #3498db;
+#btnClr {
+    -fx-background-color: #4c4e9e;
 }
-#btnVer:hover {
-    -fx-background-color: #2980b9;
+#btnClr:hover {
+    -fx-background-color: #4c4e9e;
 }
 
 /* TABLA */
@@ -107,5 +107,5 @@
 
 /* Efecto hover en filas */
 .table-row-cell:filled:hover {
-    -fx-background-color: #ecf0f1;
+    -fx-background-color: #717475;
 }

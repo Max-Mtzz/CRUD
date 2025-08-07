@@ -35,14 +35,21 @@ public class Pelicula {
         this.ano = ano;
     }
 
-    public Pelicula(int id, String nombre, String genero, int ano) {
+    public String getEstado() {
+        return estado;
+    }
+    public void setEstado(String estado) {}
+
+    public Pelicula(int id, String nombre, String genero, int ano, String estado) {
         this.id = id;
         this.nombre = nombre;
         this.genero = genero;
         this.ano = ano;
+        this.estado = estado;
     }
 
     private String nombre;
     private String genero;
     private int ano;
+    private String estado;
 }

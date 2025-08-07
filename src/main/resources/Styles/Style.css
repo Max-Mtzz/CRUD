@@ -107,5 +107,5 @@
 
 /* Efecto hover en filas */
 .table-row-cell:filled:hover {
-    -fx-background-color: #ecf0f1;
+    -fx-background-color: #717475;
 }

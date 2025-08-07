@@ -60,7 +60,7 @@ public class HelloController {
     @FXML
     private void cargarPeliculas() {
         listaPeliculas.clear();
-        String sql = "SELECT * FROM PELICULA";
+        String sql = "SELECT * FROM PELICULA ORDER BY ID_PELICULA ASC";
 
         try (Connection conn = conexion.getConnection();
              Statement stmt = conn.createStatement();
